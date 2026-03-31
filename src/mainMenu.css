@@ -1,0 +1,81 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+/* main container */
+#main{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    padding:30px;
+    
+}
+
+/* card kegiatan */
+.container{
+    background:white;
+    width:260px;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    transition:0.2s;
+}
+
+.container:hover{
+    transform:translateY(-5px);
+}
+
+/* judul kegiatan */
+.container h3{
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+/* detail */
+.container p{
+    font-size:14px;
+    color:#555;
+    margin-bottom:10px;
+}
+
+/* tanggal */
+.container h5{
+    font-size:12px;
+    color:#888;
+    margin-bottom:8px;
+}
+
+/* status */
+.container h4{
+    font-size:14px;
+    color:#0d6efd;
+    margin-bottom:15px;
+}
+
+/* tombol */
+.container button{
+    width:100%;
+    padding:8px;
+    border:none;
+    border-radius:6px;
+    background:#0d6efd;
+    cursor:pointer;
+}
+
+.container button:hover{
+    background:#0b5ed7;
+}
+
+/* link tombol */
+.container button a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+}
