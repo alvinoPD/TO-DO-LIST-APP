@@ -11,7 +11,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     $sql = mysqli_query($db,$query);
 
     if($sql){
-        echo 'data masuk';
+        header("Location: ../mainMenu.php");
     }else{
         echo 'data gagal masuk';
         die;
