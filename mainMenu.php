@@ -1,7 +1,7 @@
 <?php
 include "database/config.php";
 
-$query = mysqli_query($db,"SELECT * FROM kegiatan");
+
 ?>
 
 <!DOCTYPE html>
@@ -12,27 +12,23 @@ $query = mysqli_query($db,"SELECT * FROM kegiatan");
     <title>menu</title>
     <link rel = "stylesheet" href = "src/mainMenu.css">
     <link rel = "stylesheet" href = "src/tombolTambah.css">
-    <link rel = "stylesheet" href = "src/nav.css">
+    <link rel = "stylesheet" href = "src/sidebar.css">
 </head>
 <body>
-    <header>
-
-    </header>
-
-    <?php include "part/nav.php";?>
+    <!-- <header>
+        <nav id = "nav">
+            <h3>logo</h3>
+        </nav>
+    </header> -->
+       
+    <div class = "main-flex">
+        <?php include "part/sidebar.php";?>
     <main id = "main">
-        <?php while($data = mysqli_fetch_assoc($query)){
-
+        <?php include "crud/readMenu.php";
+            
         ?>
-        <div class = "container">
-            <h3><?=$data['kegiatan'];?></h3>
-            <p><?=$data['detail'];?></p>
-            <h5><?=$data['tanggalPengumpulan'];?></h5>
-            <h4><?=$data['status'];?></h4>
-            <button><a  href = "crud/hapus.php?id=<?=$data['id'];?>">selesai</a></button>
-        </div>
-        <?php }?>
     </main>
+    </div>
     <?php include "part/tombolTambah.php";?>
     <footer>
 

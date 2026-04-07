@@ -8,7 +8,9 @@
 body{
     background:#f4f6f9;
 }
-
+.main-flex{
+    display: flex;
+}
 /* main container */
 #main{
     display:flex;
@@ -26,6 +28,7 @@ body{
     border-radius:10px;
     box-shadow:0 4px 10px rgba(0,0,0,0.1);
     transition:0.2s;
+    height: 35vh;
 }
 
 .container:hover{
